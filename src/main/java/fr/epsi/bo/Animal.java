@@ -6,7 +6,7 @@ import java.time.LocalDate;
 
 // Définition de l'entité
 @Entity
-// Mise en place de l'héritage de type Joined (Précision du pourquoi dans le readMe)
+// Mise en place de l'héritage de type Joined
 @Inheritance(strategy = InheritanceType.JOINED)
 // Redéfinition du nom de la Table dans la BDD
 @Table(name = "animal")

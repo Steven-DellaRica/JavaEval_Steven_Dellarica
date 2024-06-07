@@ -23,7 +23,7 @@ public class Main {
         // Démarre une transaction
         em.getTransaction().begin();
 
-//         Création et mise en base de données d'objets dans la table PetStore
+        // Création et mise en base de données d'objets dans la table PetStore
         PetStore petStore1 = new PetStore("Toutou Paradis", "Omer Dilpleu");
         PetStore petStore2 = new PetStore("Chat'ptains D'amour", "Patrick Coteuse");
         PetStore petStore3 = new PetStore("Animour et Compagnie", "Henri Golant");
@@ -116,8 +116,9 @@ public class Main {
         TypedQuery<Animal> queryAnimals = em.createQuery("SELECT anm FROM Animal anm where anm.petstore.name = 'Animour et Compagnie'", Animal.class);
         List<Animal> animalList = queryAnimals.getResultList();
 
+        // Affichage de l'id des animaux que la requête a récupéré
         for (Animal animal : animalList) {
-            System.out.println(animal.getColor());
+            System.out.println(animal.getId());
         }
 
         // Fermeture de l'entity manager et l'entity manager factory

@@ -2,14 +2,12 @@ package fr.epsi.bo;
 
 import jakarta.persistence.*;
 
-/**
- * Définition de l'entité
- */
+// Définition de l'entité
 @Entity
 // Redéfinition du nom de la Table dans la BDD
 @Table(name = "address")
 public class Address {
-    // @Id défini la clé primaire de notre table, @GeneratedValue(...) met en place l'auto increment de notre ID
+    // @Id défini la clé primaire de notre table, @GeneratedValue(...) met en place l'auto increment de notre ID dans la BDD
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     // Redéfinition du nom de la Colonne dans la BDD
